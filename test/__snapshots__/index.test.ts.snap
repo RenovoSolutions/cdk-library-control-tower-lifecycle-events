@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+Object {
+  "Parameters": Object {
+    "BootstrapVersion": Object {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": Object {
+    "AccountCreatedByControlTowerSuccessfullyRuleBA2F3521": Object {
+      "Properties": Object {
+        "Description": "A rule for new account creation in Control Tower.",
+        "EventPattern": Object {
+          "detail": Object {
+            "eventName": Array [
+              "CreateManagedAccount",
+            ],
+            "serviceEventDetails": Object {
+              "createManagedAccountStatus": Object {
+                "organizationalUnit": Object {},
+                "state": Array [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": Array [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": Array [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "AccountCreatedByOrganizationsSuccessfullyRuleF2F6C164": Object {
+      "Properties": Object {
+        "Description": "A rule for new account creation in Organizations.",
+        "EventPattern": Object {
+          "detail": Object {
+            "eventName": Array [
+              "CreateAccountResult",
+            ],
+            "serviceEventDetails": Object {
+              "createAccountStatus": Object {
+                "state": Array [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": Array [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": Array [
+            "aws.organizations",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "AccountUpdatedByControlTowerSuccessfullyRule4592CF01": Object {
+      "Properties": Object {
+        "Description": "A rule for new account creation in Organizations.",
+        "EventPattern": Object {
+          "detail": Object {
+            "eventName": Array [
+              "updateManagedAccountStatus",
+            ],
+            "serviceEventDetails": Object {
+              "updateManagedAccountStatus": Object {
+                "account": Object {},
+                "organizationalUnit": Object {},
+                "state": Array [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": Array [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": Array [
+            "aws.organizations",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "AccountUpdatedByControlTowerSuccessfullyRuleDetailed2C0DB3CE": Object {
+      "Properties": Object {
+        "Description": "A rule for new account creation in Organizations.",
+        "EventPattern": Object {
+          "detail": Object {
+            "eventName": Array [
+              "updateManagedAccountStatus",
+            ],
+            "serviceEventDetails": Object {
+              "updateManagedAccountStatus": Object {
+                "account": Object {
+                  "accountId": "123456789012",
+                  "accountName": "ExampleAccount",
+                },
+                "organizationalUnit": Object {
+                  "organizationalUnitId": "o-123456789012",
+                  "organizationalUnitName": "ExampleOrganizationalUnit",
+                },
+                "state": Array [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": Array [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": Array [
+            "aws.organizations",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+  },
+  "Rules": Object {
+    "CheckBootstrapVersion": Object {
+      "Assertions": Array [
+        Object {
+          "Assert": Object {
+            "Fn::Not": Array [
+              Object {
+                "Fn::Contains": Array [
+                  Array [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  Object {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
