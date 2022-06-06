@@ -67,12 +67,15 @@
     "constructs": "^10.0.5"
   },
   "keywords": [
+    "aws-cdk",
+    "aws-cdk-construct",
     "aws-organizations",
     "cdk",
     "cloudwatch",
     "cloudwatch-events",
     "control-tower",
     "control-tower-lifecycle-events",
+    "eventbridge",
     "projen"
   ],
   "main": "lib/index.js",

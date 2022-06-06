@@ -10,7 +10,34 @@ Object {
     },
   },
   "Resources": Object {
-    "AccountCreatedByControlTowerSuccessfullyRuleBA2F3521": Object {
+    "CreatedAccountByOrganizationsRuleDAEAFAC8": Object {
+      "Properties": Object {
+        "Description": "A rule for new account creation in Organizations.",
+        "EventPattern": Object {
+          "detail": Object {
+            "eventName": Array [
+              "CreateAccountResult",
+            ],
+            "serviceEventDetails": Object {
+              "createAccountStatus": Object {
+                "state": Array [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": Array [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": Array [
+            "aws.organizations",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "CreatedAccountRuleF5BFAAF7": Object {
       "Properties": Object {
         "Description": "A rule for new account creation in Control Tower.",
         "EventPattern": Object {
@@ -38,40 +65,13 @@ Object {
       },
       "Type": "AWS::Events::Rule",
     },
-    "AccountCreatedByOrganizationsSuccessfullyRuleF2F6C164": Object {
+    "UpdatedManagedAccountRule7A7C9415": Object {
       "Properties": Object {
-        "Description": "A rule for new account creation in Organizations.",
+        "Description": "A rule for updated accounts managed by Control Tower.",
         "EventPattern": Object {
           "detail": Object {
             "eventName": Array [
-              "CreateAccountResult",
-            ],
-            "serviceEventDetails": Object {
-              "createAccountStatus": Object {
-                "state": Array [
-                  "SUCCEEDED",
-                ],
-              },
-            },
-          },
-          "detail-type": Array [
-            "AWS Service Event via CloudTrail",
-          ],
-          "source": Array [
-            "aws.organizations",
-          ],
-        },
-        "State": "ENABLED",
-      },
-      "Type": "AWS::Events::Rule",
-    },
-    "AccountUpdatedByControlTowerSuccessfullyRule4592CF01": Object {
-      "Properties": Object {
-        "Description": "A rule for new account creation in Organizations.",
-        "EventPattern": Object {
-          "detail": Object {
-            "eventName": Array [
-              "updateManagedAccountStatus",
+              "UpdateManagedAccount",
             ],
             "serviceEventDetails": Object {
               "updateManagedAccountStatus": Object {
@@ -94,13 +94,13 @@ Object {
       },
       "Type": "AWS::Events::Rule",
     },
-    "AccountUpdatedByControlTowerSuccessfullyRuleDetailed2C0DB3CE": Object {
+    "UpdatedManagedAccountRuleDetailed4A80DF35": Object {
       "Properties": Object {
-        "Description": "A rule for new account creation in Organizations.",
+        "Description": "A rule for updated accounts managed by Control Tower.",
         "EventPattern": Object {
           "detail": Object {
             "eventName": Array [
-              "updateManagedAccountStatus",
+              "UpdateManagedAccount",
             ],
             "serviceEventDetails": Object {
               "updateManagedAccountStatus": Object {
