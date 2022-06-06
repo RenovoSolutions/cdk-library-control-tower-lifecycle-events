@@ -18,6 +18,10 @@ test('Snapshot', () => {
     ouId: 'o-123456789012',
     ouName: 'ExampleOrganizationalUnit',
   });
+  new UpdatedManagedAccountRule(stack, 'UpdatedManagedAccountRuleLessDetailed', {
+    accountName: 'ExampleAccount',
+    ouName: 'ExampleOrganizationalUnit',
+  });
   new UpdatedManagedAccountRule(stack, 'UpdatedManagedAccountRule', {});
 
   expect(Template.fromStack(stack)).toMatchSnapshot();

@@ -47,7 +47,6 @@ Object {
             ],
             "serviceEventDetails": Object {
               "createManagedAccountStatus": Object {
-                "organizationalUnit": Object {},
                 "state": Array [
                   "SUCCEEDED",
                 ],
@@ -75,8 +74,6 @@ Object {
             ],
             "serviceEventDetails": Object {
               "updateManagedAccountStatus": Object {
-                "account": Object {},
-                "organizationalUnit": Object {},
                 "state": Array [
                   "SUCCEEDED",
                 ],
@@ -110,6 +107,39 @@ Object {
                 },
                 "organizationalUnit": Object {
                   "organizationalUnitId": "o-123456789012",
+                  "organizationalUnitName": "ExampleOrganizationalUnit",
+                },
+                "state": Array [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": Array [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": Array [
+            "aws.organizations",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "UpdatedManagedAccountRuleLessDetailed613FEC73": Object {
+      "Properties": Object {
+        "Description": "A rule for updated accounts managed by Control Tower.",
+        "EventPattern": Object {
+          "detail": Object {
+            "eventName": Array [
+              "UpdateManagedAccount",
+            ],
+            "serviceEventDetails": Object {
+              "updateManagedAccountStatus": Object {
+                "account": Object {
+                  "accountName": "ExampleAccount",
+                },
+                "organizationalUnit": Object {
                   "organizationalUnitName": "ExampleOrganizationalUnit",
                 },
                 "state": Array [
