@@ -131,7 +131,7 @@ export class CreatedAccountByOrganizationsRule extends events.Rule {
  */
 export class CreatedAccountRule extends events.Rule {
   constructor(scope: Construct, id: string, props: OuRuleProps) {
-    const eventPattern = {
+    let eventPattern:any = {
       source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
@@ -140,15 +140,19 @@ export class CreatedAccountRule extends events.Rule {
         ],
         serviceEventDetails: {
           createManagedAccountStatus: {
-            organizationalUnit: {
-              organizationalUnitName: props.ouName,
-              organizationalUnitId: props.ouId,
-            },
             state: [props.eventState ?? EventStates.SUCCEEDED],
           },
         },
       },
     };
+
+    if (props.ouId || props.ouName) {
+      eventPattern.detail.serviceEventDetails.createManagedAccountStatus.organizationalUnit = {
+        organizationalUnitName: props.ouName,
+        organizationalUnitId: props.ouId,
+      };
+    };
+
     const description = props.description ?? 'A rule for new account creation in Control Tower.';
     super(scope, id, { eventPattern, description, ...props });
   }
@@ -159,7 +163,7 @@ export class CreatedAccountRule extends events.Rule {
  */
 export class UpdatedManagedAccountRule extends events.Rule {
   constructor(scope: Construct, id: string, props: AccountRuleProps) {
-    const eventPattern = {
+    let eventPattern:any = {
       source: ['aws.organizations'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
@@ -168,18 +172,24 @@ export class UpdatedManagedAccountRule extends events.Rule {
         ],
         serviceEventDetails: {
           updateManagedAccountStatus: {
-            organizationalUnit: {
-              organizationalUnitName: props.ouName,
-              organizationalUnitId: props.ouId,
-            },
-            account: {
-              accountName: props.accountName,
-              accountId: props.accountId,
-            },
             state: [props.eventState ?? EventStates.SUCCEEDED],
           },
         },
       },
+    };
+
+    if (props.ouId || props.ouName) {
+      eventPattern.detail.serviceEventDetails.updateManagedAccountStatus.organizationalUnit = {
+        organizationalUnitName: props.ouName,
+        organizationalUnitId: props.ouId,
+      };
+    };
+
+    if (props.accountId || props.accountName) {
+      eventPattern.detail.serviceEventDetails.updateManagedAccountStatus.account = {
+        accountName: props.accountName,
+        accountId: props.accountId,
+      };
     };
 
     const description = props.description ?? 'A rule for updated accounts managed by Control Tower.';
@@ -217,7 +227,7 @@ export class RegisteredOrganizationalUnitRule extends events.Rule {
  */
 export class DeregisteredOrganizationalUnitRule extends events.Rule {
   constructor(scope: Construct, id: string, props: OuRuleProps) {
-    const eventPattern = {
+    let eventPattern:any = {
       source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
@@ -226,15 +236,19 @@ export class DeregisteredOrganizationalUnitRule extends events.Rule {
         ],
         serviceEventDetails: {
           deregisterOrganizationalUnitStatus: {
-            organizationalUnit: {
-              organizationalUnitName: props.ouName,
-              organizationalUnitId: props.ouId,
-            },
             state: [props.eventState ?? EventStates.SUCCEEDED],
           },
         },
       },
     };
+
+    if (props.ouId || props.ouName) {
+      eventPattern.detail.serviceEventDetails.deregisterOrganizationalUnitStatus.organizationalUnit = {
+        organizationalUnitName: props.ouName,
+        organizationalUnitId: props.ouId,
+      };
+    };
+
     const description = props.description ?? 'A rule for deregistered OUs in Control Tower.';
     super(scope, id, { eventPattern, description, ...props });
   }
@@ -245,7 +259,7 @@ export class DeregisteredOrganizationalUnitRule extends events.Rule {
  */
 export class DisabledGuardrailRule extends events.Rule {
   constructor(scope: Construct, id: string, props: GuardrailRuleProps) {
-    const eventPattern = {
+    let eventPattern:any = {
       source: ['aws.organizations'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
@@ -254,22 +268,28 @@ export class DisabledGuardrailRule extends events.Rule {
         ],
         serviceEventDetails: {
           disableGuardrailStatus: {
-            organizationalUnits: [
-              {
-                organizationalUnitName: props.ouName,
-                organizationalUnitId: props.ouId,
-              },
-            ],
-            guardrails: [
-              {
-                guardrailId: props.guardrailId,
-                guardrailBehavior: props.guardrailBehavior,
-              },
-            ],
             state: [props.eventState ?? EventStates.SUCCEEDED],
           },
         },
       },
+    };
+
+    if (props.ouId || props.ouName) {
+      eventPattern.detail.serviceEventDetails.disableGuardrailStatus.organizationalUnits = [
+        {
+          organizationalUnitName: props.ouName,
+          organizationalUnitId: props.ouId,
+        },
+      ];
+    };
+
+    if (props.guardrailId || props.guardrailBehavior) {
+      eventPattern.detail.serviceEventDetails.disableGuardrailStatus.guardrails = [
+        {
+          guardrailId: props.guardrailId,
+          guardrailBehavior: props.guardrailBehavior,
+        },
+      ];
     };
 
     const description = props.description ?? 'A rule for disabled guardrails in Control Tower.';
@@ -282,7 +302,7 @@ export class DisabledGuardrailRule extends events.Rule {
  */
 export class EnabledGuardrailRule extends events.Rule {
   constructor(scope: Construct, id: string, props: GuardrailRuleProps) {
-    const eventPattern = {
+    let eventPattern:any = {
       source: ['aws.organizations'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
@@ -307,6 +327,24 @@ export class EnabledGuardrailRule extends events.Rule {
           },
         },
       },
+    };
+
+    if (props.ouId || props.ouName) {
+      eventPattern.detail.serviceEventDetails.enableGuardrailStatus.organizationalUnits = [
+        {
+          organizationalUnitName: props.ouName,
+          organizationalUnitId: props.ouId,
+        },
+      ];
+    };
+
+    if (props.guardrailId || props.guardrailBehavior) {
+      eventPattern.detail.serviceEventDetails.enableGuardrailStatus.guardrails = [
+        {
+          guardrailId: props.guardrailId,
+          guardrailBehavior: props.guardrailBehavior,
+        },
+      ];
     };
 
     const description = props.description ?? 'A rule for enabled guardrails in Control Tower.';
