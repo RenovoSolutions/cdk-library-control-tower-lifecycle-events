@@ -3822,10 +3822,10 @@ jsii-diff@^1.59.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^7.0.27:
-  version "7.0.27"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.27.tgz#73c3921874db79d0ea658e0f4a617d2e51793225"
-  integrity sha512-rtiX7HGXLh63EyrbWVsi/CaTqFJt/g7I+lu64j1N18VVoNjRr0uIMroGzq60Fmymcq7afEY7Txx0VsWSU+C5RA==
+jsii-docgen@^7.0.29:
+  version "7.0.29"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.29.tgz#14a4cfe9fb5d1d596cee4f39e053773653950998"
+  integrity sha512-w20lKV8c4zlL0VCs8udNqMLDdEBQyNNF/Z5VX1qphS8zdqLo6AYa3U9WlyLrZZnfclvCJJ7XhUJW6/AUZG+a1g==
   dependencies:
     "@jsii/spec" "^1.59.0"
     case "^1.6.3"
@@ -5870,9 +5870,9 @@ typescript@~3.9.10:
   integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
 uglify-js@^3.1.4:
-  version "3.15.5"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.5.tgz#2b10f9e0bfb3f5c15a8e8404393b6361eaeb33b3"
-  integrity sha512-hNM5q5GbBRB5xB+PMqVRcgYe4c8jbyZ1pzZhS6jbq54/4F2gFK869ZheiE5A8/t+W5jtTNpWef/5Q9zk639FNQ==
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.16.0.tgz#b778ba0831ca102c1d8ecbdec2d2bdfcc7353190"
+  integrity sha512-FEikl6bR30n0T3amyBh3LoiBdqHRy/f4H80+My34HOesOKyHfOsxAPAxOoqC0JUnC1amnO0IwkYC3sko51caSw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
