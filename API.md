@@ -147,6 +147,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -167,6 +168,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isOwnedResource"></a>
+
+```typescript
+import { CreatedAccountByOrganizationsRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+CreatedAccountByOrganizationsRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -445,6 +462,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -465,6 +483,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isOwnedResource"></a>
+
+```typescript
+import { CreatedAccountRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+CreatedAccountRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -743,6 +777,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -763,6 +798,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isOwnedResource"></a>
+
+```typescript
+import { DeregisteredOrganizationalUnitRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+DeregisteredOrganizationalUnitRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -1041,6 +1092,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -1061,6 +1113,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isOwnedResource"></a>
+
+```typescript
+import { DisabledGuardrailRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+DisabledGuardrailRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -1339,6 +1407,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -1359,6 +1428,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isOwnedResource"></a>
+
+```typescript
+import { EnabledGuardrailRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+EnabledGuardrailRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -1637,6 +1722,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -1657,6 +1743,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isOwnedResource"></a>
+
+```typescript
+import { RegisteredOrganizationalUnitRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+RegisteredOrganizationalUnitRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -1935,6 +2037,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -1955,6 +2058,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isOwnedResource"></a>
+
+```typescript
+import { SetupLandingZoneRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+SetupLandingZoneRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -2233,6 +2352,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -2253,6 +2373,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isOwnedResource"></a>
+
+```typescript
+import { UpdatedLandingZoneRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+UpdatedLandingZoneRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
@@ -2531,6 +2667,7 @@ No-op if target is undefined.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.fromEventRuleArn">fromEventRuleArn</a></code> | Import an existing EventBridge Rule provided an ARN. |
 
@@ -2551,6 +2688,22 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isOwnedResource"></a>
+
+```typescript
+import { UpdatedManagedAccountRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
+
+UpdatedManagedAccountRule.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
