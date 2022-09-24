@@ -3,7 +3,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
   projenrcTs: true,
-  cdkVersion: '2.43.0',
+  cdkVersion: '2.43.1',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-control-tower-lifecycle-events',
   description: 'An AWS CDK library that provides event patterns that match common Control Tower lifecycle events.',
