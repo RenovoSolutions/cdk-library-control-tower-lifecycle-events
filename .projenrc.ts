@@ -83,7 +83,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
       timers: 'fake',
     },
   },
-  workflowNodeVersion: '14.17.0',
 });
 
 new javascript.UpgradeDependencies(project, {
