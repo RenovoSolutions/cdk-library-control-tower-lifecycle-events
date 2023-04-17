@@ -94,31 +94,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -409,31 +409,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -724,31 +724,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -1039,31 +1039,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -1354,31 +1354,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -1669,31 +1669,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -1984,31 +1984,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -2299,31 +2299,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.addEventPattern.parameter.eventPattern"></a>
 
@@ -2614,31 +2614,31 @@ these values are merged into the existing pattern.
 
 For example, if the rule already contains the pattern:
 
-    {
-      "resources": [ "r1" ],
-      "detail": {
-        "hello": [ 1 ]
-      }
-    }
+   {
+     "resources": [ "r1" ],
+     "detail": {
+       "hello": [ 1 ]
+     }
+   }
 
 And `addEventPattern` is called with the pattern:
 
-    {
-      "resources": [ "r2" ],
-      "detail": {
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r2" ],
+     "detail": {
+       "foo": [ "bar" ]
+     }
+   }
 
 The resulting event pattern will be:
 
-    {
-      "resources": [ "r1", "r2" ],
-      "detail": {
-        "hello": [ 1 ],
-        "foo": [ "bar" ]
-      }
-    }
+   {
+     "resources": [ "r1", "r2" ],
+     "detail": {
+       "hello": [ 1 ],
+       "foo": [ "bar" ]
+     }
+   }
 
 ###### `eventPattern`<sup>Optional</sup> <a name="eventPattern" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.addEventPattern.parameter.eventPattern"></a>
 
