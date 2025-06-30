@@ -24,3 +24,6 @@ tsconfig.tsbuildinfo
 !.jsii
 .functionbundle/*
 .venv/*
+/.gitattributes
+/.projenrc.ts
+/projenrc

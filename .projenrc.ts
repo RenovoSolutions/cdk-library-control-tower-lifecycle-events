@@ -3,7 +3,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
   projenrcTs: true,
-  cdkVersion: '2.86.0',
+  cdkVersion: '2.202.0',
+  jsiiVersion: '^5.8.0',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-control-tower-lifecycle-events',
   description: 'An AWS CDK library that provides event patterns that match common Control Tower lifecycle events.',
@@ -72,7 +73,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   eslint: true,
   publishToPypi: {
     distName: 'renovosolutions.aws-cdk-control-tower-lifecycle-events',
-    module: 'control-tower-lifecycle-events',
+    module: 'renovosolutions_control_tower_lifecycle_events',
   },
   publishToNuget: {
     dotNetNamespace: 'renovosolutions',
@@ -80,7 +81,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   jestOptions: {
     jestConfig: {
-      timers: 'fake',
+      fakeTimers: {
+        enableGlobally: true,
+      },
     },
   },
 });

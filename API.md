@@ -1,14 +1,3 @@
-# cdk-library-control-tower-lifecycle-events
-
-NOTE: This project is in active development.
-
-This construct library contains events that represent lifecycle events in Control Tower or events related to actions in Control Tower. See the [API](API.md) for full details on the available constructs.
-
-## References
-
-- [Reference](https://github.com/aws/aws-cdk/issues/3235) for creating constructs that extend and existing one more easily
-- [Control Tower Lifecycle Events](https://docs.aws.amazon.com/controltower/latest/userguide/lifecycle-events.html) AWS doc
-
 # API Reference <a name="API Reference" id="api-reference"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -327,6 +316,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### CreatedAccountRule <a name="CreatedAccountRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule"></a>
 
@@ -642,6 +650,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### DeregisteredOrganizationalUnitRule <a name="DeregisteredOrganizationalUnitRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule"></a>
 
@@ -957,6 +984,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### DisabledGuardrailRule <a name="DisabledGuardrailRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule"></a>
 
@@ -1272,6 +1318,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### EnabledGuardrailRule <a name="EnabledGuardrailRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule"></a>
 
@@ -1587,6 +1652,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### RegisteredOrganizationalUnitRule <a name="RegisteredOrganizationalUnitRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule"></a>
 
@@ -1902,6 +1986,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### SetupLandingZoneRule <a name="SetupLandingZoneRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule"></a>
 
@@ -2217,6 +2320,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### UpdatedLandingZoneRule <a name="UpdatedLandingZoneRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule"></a>
 
@@ -2532,6 +2654,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ### UpdatedManagedAccountRule <a name="UpdatedManagedAccountRule" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule"></a>
 
@@ -2847,6 +2988,25 @@ The name event rule.
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.PROPERTY_INJECTION_ID">PROPERTY_INJECTION_ID</a></code> | <code>string</code> | Uniquely identifies this class. |
+
+---
+
+##### `PROPERTY_INJECTION_ID`<sup>Required</sup> <a name="PROPERTY_INJECTION_ID" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.PROPERTY_INJECTION_ID"></a>
+
+```typescript
+public readonly PROPERTY_INJECTION_ID: string;
+```
+
+- *Type:* string
+
+Uniquely identifies this class.
+
+---
 
 ## Structs <a name="Structs" id="Structs"></a>
 
