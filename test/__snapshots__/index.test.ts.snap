@@ -1,35 +1,35 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Snapshot 1`] = `
-Object {
-  "Parameters": Object {
-    "BootstrapVersion": Object {
+{
+  "Parameters": {
+    "BootstrapVersion": {
       "Default": "/cdk-bootstrap/hnb659fds/version",
       "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
       "Type": "AWS::SSM::Parameter::Value<String>",
     },
   },
-  "Resources": Object {
-    "CreatedAccountByOrganizationsRuleDAEAFAC8": Object {
-      "Properties": Object {
+  "Resources": {
+    "CreatedAccountByOrganizationsRuleDAEAFAC8": {
+      "Properties": {
         "Description": "A rule for new account creation in Organizations.",
-        "EventPattern": Object {
-          "detail": Object {
-            "eventName": Array [
+        "EventPattern": {
+          "detail": {
+            "eventName": [
               "CreateAccountResult",
             ],
-            "serviceEventDetails": Object {
-              "createAccountStatus": Object {
-                "state": Array [
+            "serviceEventDetails": {
+              "createAccountStatus": {
+                "state": [
                   "SUCCEEDED",
                 ],
               },
             },
           },
-          "detail-type": Array [
+          "detail-type": [
             "AWS Service Event via CloudTrail",
           ],
-          "source": Array [
+          "source": [
             "aws.organizations",
           ],
         },
@@ -37,26 +37,26 @@ Object {
       },
       "Type": "AWS::Events::Rule",
     },
-    "CreatedAccountRuleF5BFAAF7": Object {
-      "Properties": Object {
+    "CreatedAccountRuleF5BFAAF7": {
+      "Properties": {
         "Description": "A rule for new account creation in Control Tower.",
-        "EventPattern": Object {
-          "detail": Object {
-            "eventName": Array [
+        "EventPattern": {
+          "detail": {
+            "eventName": [
               "CreateManagedAccount",
             ],
-            "serviceEventDetails": Object {
-              "createManagedAccountStatus": Object {
-                "state": Array [
+            "serviceEventDetails": {
+              "createManagedAccountStatus": {
+                "state": [
                   "SUCCEEDED",
                 ],
               },
             },
           },
-          "detail-type": Array [
+          "detail-type": [
             "AWS Service Event via CloudTrail",
           ],
-          "source": Array [
+          "source": [
             "aws.controltower",
           ],
         },
@@ -64,26 +64,26 @@ Object {
       },
       "Type": "AWS::Events::Rule",
     },
-    "UpdatedManagedAccountRule7A7C9415": Object {
-      "Properties": Object {
+    "UpdatedManagedAccountRule7A7C9415": {
+      "Properties": {
         "Description": "A rule for updated accounts managed by Control Tower.",
-        "EventPattern": Object {
-          "detail": Object {
-            "eventName": Array [
+        "EventPattern": {
+          "detail": {
+            "eventName": [
               "UpdateManagedAccount",
             ],
-            "serviceEventDetails": Object {
-              "updateManagedAccountStatus": Object {
-                "state": Array [
+            "serviceEventDetails": {
+              "updateManagedAccountStatus": {
+                "state": [
                   "SUCCEEDED",
                 ],
               },
             },
           },
-          "detail-type": Array [
+          "detail-type": [
             "AWS Service Event via CloudTrail",
           ],
-          "source": Array [
+          "source": [
             "aws.organizations",
           ],
         },
@@ -91,34 +91,34 @@ Object {
       },
       "Type": "AWS::Events::Rule",
     },
-    "UpdatedManagedAccountRuleDetailed4A80DF35": Object {
-      "Properties": Object {
+    "UpdatedManagedAccountRuleDetailed4A80DF35": {
+      "Properties": {
         "Description": "A rule for updated accounts managed by Control Tower.",
-        "EventPattern": Object {
-          "detail": Object {
-            "eventName": Array [
+        "EventPattern": {
+          "detail": {
+            "eventName": [
               "UpdateManagedAccount",
             ],
-            "serviceEventDetails": Object {
-              "updateManagedAccountStatus": Object {
-                "account": Object {
+            "serviceEventDetails": {
+              "updateManagedAccountStatus": {
+                "account": {
                   "accountId": "123456789012",
                   "accountName": "ExampleAccount",
                 },
-                "organizationalUnit": Object {
+                "organizationalUnit": {
                   "organizationalUnitId": "o-123456789012",
                   "organizationalUnitName": "ExampleOrganizationalUnit",
                 },
-                "state": Array [
+                "state": [
                   "SUCCEEDED",
                 ],
               },
             },
           },
-          "detail-type": Array [
+          "detail-type": [
             "AWS Service Event via CloudTrail",
           ],
-          "source": Array [
+          "source": [
             "aws.organizations",
           ],
         },
@@ -126,32 +126,32 @@ Object {
       },
       "Type": "AWS::Events::Rule",
     },
-    "UpdatedManagedAccountRuleLessDetailed613FEC73": Object {
-      "Properties": Object {
+    "UpdatedManagedAccountRuleLessDetailed613FEC73": {
+      "Properties": {
         "Description": "A rule for updated accounts managed by Control Tower.",
-        "EventPattern": Object {
-          "detail": Object {
-            "eventName": Array [
+        "EventPattern": {
+          "detail": {
+            "eventName": [
               "UpdateManagedAccount",
             ],
-            "serviceEventDetails": Object {
-              "updateManagedAccountStatus": Object {
-                "account": Object {
+            "serviceEventDetails": {
+              "updateManagedAccountStatus": {
+                "account": {
                   "accountName": "ExampleAccount",
                 },
-                "organizationalUnit": Object {
+                "organizationalUnit": {
                   "organizationalUnitName": "ExampleOrganizationalUnit",
                 },
-                "state": Array [
+                "state": [
                   "SUCCEEDED",
                 ],
               },
             },
           },
-          "detail-type": Array [
+          "detail-type": [
             "AWS Service Event via CloudTrail",
           ],
-          "source": Array [
+          "source": [
             "aws.organizations",
           ],
         },
@@ -160,22 +160,22 @@ Object {
       "Type": "AWS::Events::Rule",
     },
   },
-  "Rules": Object {
-    "CheckBootstrapVersion": Object {
-      "Assertions": Array [
-        Object {
-          "Assert": Object {
-            "Fn::Not": Array [
-              Object {
-                "Fn::Contains": Array [
-                  Array [
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
                     "1",
                     "2",
                     "3",
                     "4",
                     "5",
                   ],
-                  Object {
+                  {
                     "Ref": "BootstrapVersion",
                   },
                 ],
