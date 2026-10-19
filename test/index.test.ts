@@ -4,6 +4,12 @@ import {
   CreatedAccountRule,
   CreatedAccountByOrganizationsRule,
   UpdatedManagedAccountRule,
+  RegisteredOrganizationalUnitRule,
+  DeregisteredOrganizationalUnitRule,
+  DisabledGuardrailRule,
+  EnabledGuardrailRule,
+  SetupLandingZoneRule,
+  UpdatedLandingZoneRule,
 } from '../src/index';
 
 test('Snapshot', () => {
@@ -23,6 +29,13 @@ test('Snapshot', () => {
     ouName: 'ExampleOrganizationalUnit',
   });
   new UpdatedManagedAccountRule(stack, 'UpdatedManagedAccountRule', {});
+
+  new RegisteredOrganizationalUnitRule(stack, 'RegisteredOrganizationalUnitRule', {});
+  new DeregisteredOrganizationalUnitRule(stack, 'DeregisteredOrganizationalUnitRule', {});
+  new DisabledGuardrailRule(stack, 'DisabledGuardrailRule', {});
+  new EnabledGuardrailRule(stack, 'EnabledGuardrailRule', {});
+  new SetupLandingZoneRule(stack, 'SetupLandingZoneRule', {});
+  new UpdatedLandingZoneRule(stack, 'UpdatedLandingZoneRule', {});
 
   expect(Template.fromStack(stack)).toMatchSnapshot();
 });

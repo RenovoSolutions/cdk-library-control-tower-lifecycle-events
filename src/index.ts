@@ -164,7 +164,7 @@ export class CreatedAccountRule extends events.Rule {
 export class UpdatedManagedAccountRule extends events.Rule {
   constructor(scope: Construct, id: string, props: AccountRuleProps) {
     let eventPattern:any = {
-      source: ['aws.organizations'],
+      source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
         eventName: [
@@ -203,7 +203,7 @@ export class UpdatedManagedAccountRule extends events.Rule {
 export class RegisteredOrganizationalUnitRule extends events.Rule {
   constructor(scope: Construct, id: string, props: BaseRuleProps) {
     const eventPattern = {
-      source: ['aws.organizations'],
+      source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
         eventName: [
@@ -260,7 +260,7 @@ export class DeregisteredOrganizationalUnitRule extends events.Rule {
 export class DisabledGuardrailRule extends events.Rule {
   constructor(scope: Construct, id: string, props: GuardrailRuleProps) {
     let eventPattern:any = {
-      source: ['aws.organizations'],
+      source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
         eventName: [
@@ -303,7 +303,7 @@ export class DisabledGuardrailRule extends events.Rule {
 export class EnabledGuardrailRule extends events.Rule {
   constructor(scope: Construct, id: string, props: GuardrailRuleProps) {
     let eventPattern:any = {
-      source: ['aws.organizations'],
+      source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
         eventName: [
@@ -358,7 +358,7 @@ export class EnabledGuardrailRule extends events.Rule {
 export class SetupLandingZoneRule extends events.Rule {
   constructor(scope: Construct, id: string, props: BaseRuleProps) {
     const eventPattern = {
-      source: ['aws.organizations'],
+      source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
         eventName: [
@@ -383,7 +383,7 @@ export class SetupLandingZoneRule extends events.Rule {
 export class UpdatedLandingZoneRule extends events.Rule {
   constructor(scope: Construct, id: string, props: BaseRuleProps) {
     const eventPattern = {
-      source: ['aws.organizations'],
+      source: ['aws.controltower'],
       detailType: ['AWS Service Event via CloudTrail'],
       detail: {
         eventName: [

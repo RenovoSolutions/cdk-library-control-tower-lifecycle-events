@@ -64,6 +64,174 @@ exports[`Snapshot 1`] = `
       },
       "Type": "AWS::Events::Rule",
     },
+    "DeregisteredOrganizationalUnitRule0A083168": {
+      "Properties": {
+        "Description": "A rule for deregistered OUs in Control Tower.",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "DeregisterOrganizationalUnit",
+            ],
+            "serviceEventDetails": {
+              "deregisterOrganizationalUnitStatus": {
+                "state": [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "DisabledGuardrailRule2FED4A17": {
+      "Properties": {
+        "Description": "A rule for disabled guardrails in Control Tower.",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "DisableGuardrail",
+            ],
+            "serviceEventDetails": {
+              "disableGuardrailStatus": {
+                "state": [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "EnabledGuardrailRule4BDFB91C": {
+      "Properties": {
+        "Description": "A rule for enabled guardrails in Control Tower.",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "EnableGuardrail",
+            ],
+            "serviceEventDetails": {
+              "enableGuardrailStatus": {
+                "guardrails": [
+                  {},
+                ],
+                "organizationalUnits": [
+                  {},
+                ],
+                "state": [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "RegisteredOrganizationalUnitRule88EE8798": {
+      "Properties": {
+        "Description": "A rule for registered OUs in Control Tower.",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "RegisterOrganizationalUnit",
+            ],
+            "serviceEventDetails": {
+              "registerOrganizationalUnitStatus": {
+                "state": [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "SetupLandingZoneRule3AC7ECB3": {
+      "Properties": {
+        "Description": "A rule for landing zone setup in Control Tower.",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "SetupLandingZone",
+            ],
+            "serviceEventDetails": {
+              "setupLandingZoneStatus": {
+                "state": [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "UpdatedLandingZoneRule129F5234": {
+      "Properties": {
+        "Description": "A rule for landing zone updates in Control Tower.",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "UpdateLandingZone",
+            ],
+            "serviceEventDetails": {
+              "updateLandingZoneStatus": {
+                "state": [
+                  "SUCCEEDED",
+                ],
+              },
+            },
+          },
+          "detail-type": [
+            "AWS Service Event via CloudTrail",
+          ],
+          "source": [
+            "aws.controltower",
+          ],
+        },
+        "State": "ENABLED",
+      },
+      "Type": "AWS::Events::Rule",
+    },
     "UpdatedManagedAccountRule7A7C9415": {
       "Properties": {
         "Description": "A rule for updated accounts managed by Control Tower.",
@@ -84,7 +252,7 @@ exports[`Snapshot 1`] = `
             "AWS Service Event via CloudTrail",
           ],
           "source": [
-            "aws.organizations",
+            "aws.controltower",
           ],
         },
         "State": "ENABLED",
@@ -119,7 +287,7 @@ exports[`Snapshot 1`] = `
             "AWS Service Event via CloudTrail",
           ],
           "source": [
-            "aws.organizations",
+            "aws.controltower",
           ],
         },
         "State": "ENABLED",
@@ -152,7 +320,7 @@ exports[`Snapshot 1`] = `
             "AWS Service Event via CloudTrail",
           ],
           "source": [
-            "aws.organizations",
+            "aws.controltower",
           ],
         },
         "State": "ENABLED",
