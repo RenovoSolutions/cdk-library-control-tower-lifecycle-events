@@ -148,8 +148,8 @@ export class CreatedAccountRule extends events.Rule {
 
     if (props.ouId || props.ouName) {
       eventPattern.detail.serviceEventDetails.createManagedAccountStatus.organizationalUnit = {
-        organizationalUnitName: props.ouName,
-        organizationalUnitId: props.ouId,
+        organizationalUnitName: props.ouName ? [props.ouName] : undefined,
+        organizationalUnitId: props.ouId ? [props.ouId] : undefined,
       };
     };
 
@@ -180,15 +180,15 @@ export class UpdatedManagedAccountRule extends events.Rule {
 
     if (props.ouId || props.ouName) {
       eventPattern.detail.serviceEventDetails.updateManagedAccountStatus.organizationalUnit = {
-        organizationalUnitName: props.ouName,
-        organizationalUnitId: props.ouId,
+        organizationalUnitName: props.ouName ? [props.ouName] : undefined,
+        organizationalUnitId: props.ouId ? [props.ouId] : undefined,
       };
     };
 
     if (props.accountId || props.accountName) {
       eventPattern.detail.serviceEventDetails.updateManagedAccountStatus.account = {
-        accountName: props.accountName,
-        accountId: props.accountId,
+        accountName: props.accountName ? [props.accountName] : undefined,
+        accountId: props.accountId ? [props.accountId] : undefined,
       };
     };
 
@@ -244,8 +244,8 @@ export class DeregisteredOrganizationalUnitRule extends events.Rule {
 
     if (props.ouId || props.ouName) {
       eventPattern.detail.serviceEventDetails.deregisterOrganizationalUnitStatus.organizationalUnit = {
-        organizationalUnitName: props.ouName,
-        organizationalUnitId: props.ouId,
+        organizationalUnitName: props.ouName ? [props.ouName] : undefined,
+        organizationalUnitId: props.ouId ? [props.ouId] : undefined,
       };
     };
 
@@ -275,21 +275,17 @@ export class DisabledGuardrailRule extends events.Rule {
     };
 
     if (props.ouId || props.ouName) {
-      eventPattern.detail.serviceEventDetails.disableGuardrailStatus.organizationalUnits = [
-        {
-          organizationalUnitName: props.ouName,
-          organizationalUnitId: props.ouId,
-        },
-      ];
+      eventPattern.detail.serviceEventDetails.disableGuardrailStatus.organizationalUnits = {
+        organizationalUnitName: props.ouName ? [props.ouName] : undefined,
+        organizationalUnitId: props.ouId ? [props.ouId] : undefined,
+      };
     };
 
     if (props.guardrailId || props.guardrailBehavior) {
-      eventPattern.detail.serviceEventDetails.disableGuardrailStatus.guardrails = [
-        {
-          guardrailId: props.guardrailId,
-          guardrailBehavior: props.guardrailBehavior,
-        },
-      ];
+      eventPattern.detail.serviceEventDetails.disableGuardrailStatus.guardrails = {
+        guardrailId: props.guardrailId ? [props.guardrailId] : undefined,
+        guardrailBehavior: props.guardrailBehavior ? [props.guardrailBehavior] : undefined,
+      };
     };
 
     const description = props.description ?? 'A rule for disabled guardrails in Control Tower.';
@@ -311,18 +307,6 @@ export class EnabledGuardrailRule extends events.Rule {
         ],
         serviceEventDetails: {
           enableGuardrailStatus: {
-            organizationalUnits: [
-              {
-                organizationalUnitName: props.ouName,
-                organizationalUnitId: props.ouId,
-              },
-            ],
-            guardrails: [
-              {
-                guardrailId: props.guardrailId,
-                guardrailBehavior: props.guardrailBehavior,
-              },
-            ],
             state: [props.eventState ?? EventStates.SUCCEEDED],
           },
         },
@@ -330,21 +314,17 @@ export class EnabledGuardrailRule extends events.Rule {
     };
 
     if (props.ouId || props.ouName) {
-      eventPattern.detail.serviceEventDetails.enableGuardrailStatus.organizationalUnits = [
-        {
-          organizationalUnitName: props.ouName,
-          organizationalUnitId: props.ouId,
-        },
-      ];
+      eventPattern.detail.serviceEventDetails.enableGuardrailStatus.organizationalUnits = {
+        organizationalUnitName: props.ouName ? [props.ouName] : undefined,
+        organizationalUnitId: props.ouId ? [props.ouId] : undefined,
+      };
     };
 
     if (props.guardrailId || props.guardrailBehavior) {
-      eventPattern.detail.serviceEventDetails.enableGuardrailStatus.guardrails = [
-        {
-          guardrailId: props.guardrailId,
-          guardrailBehavior: props.guardrailBehavior,
-        },
-      ];
+      eventPattern.detail.serviceEventDetails.enableGuardrailStatus.guardrails = {
+        guardrailId: props.guardrailId ? [props.guardrailId] : undefined,
+        guardrailBehavior: props.guardrailBehavior ? [props.guardrailBehavior] : undefined,
+      };
     };
 
     const description = props.description ?? 'A rule for enabled guardrails in Control Tower.';

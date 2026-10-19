@@ -5,6 +5,10 @@ NOTE: This project is in active development.
 EventBridge rules for AWS Control Tower lifecycle events and Organizations
 account creation. See the [API](API.md) for the available constructs.
 
+Rules match successful events by default. Set `eventState` to
+`EventStates.FAILED` to match failures instead. You can filter by account,
+OU, or guardrail. If you set both `ouId` and `ouName`, both must match.
+
 ## Development
 
 Requires Node.js and pnpm 12. From the repository directory:
