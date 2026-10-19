@@ -3,8 +3,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
   projenrcTs: true,
-  cdkVersion: '2.202.0',
-  jsiiVersion: '^5.8.0',
+  cdkVersion: '2.267.0',
+  cdkCliVersion: '2.1129.0',
+  constructsVersion: '10.6.0',
+  cdkVersionPinning: true,
+  projenVersion: '0.104.4',
+  packageManager: javascript.NodePackageManager.PNPM,
+  addPackageManagerToDevEngines: false,
+  jsiiVersion: '6.0.18',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-control-tower-lifecycle-events',
   description: 'An AWS CDK library that provides event patterns that match common Control Tower lifecycle events.',
@@ -90,6 +96,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
 });
 
+project.addPeerDeps(`aws-cdk-lib@^${project.cdkVersion}`);
+
 new javascript.UpgradeDependencies(project, {
   include: ['projen'],
   taskName: 'upgrade-projen',
@@ -112,5 +120,7 @@ ignorePatterns.forEach( (pattern) => {
 // Ignore the release workflow file so it's not committed to git
 project.gitignore.exclude('!/.github/workflows/release.yml');
 project.gitignore.addPatterns('.github/workflows/release.yml');
+
+project.package.file.addDeletionOverride('packageManager');
 
 project.synth();

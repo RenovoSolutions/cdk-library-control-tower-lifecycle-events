@@ -45,6 +45,8 @@ new CreatedAccountByOrganizationsRule(scope: Construct, id: string, props: BaseR
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -58,6 +60,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.applyRemovalPolicy"></a>
 
@@ -153,7 +196,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isConstruct"></a>
 
 ```typescript
 import { CreatedAccountByOrganizationsRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -162,6 +205,20 @@ CreatedAccountByOrganizationsRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.isConstruct.parameter.x"></a>
 
@@ -242,10 +299,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -267,16 +325,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -313,6 +372,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountByOrganizationsRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -379,6 +450,8 @@ new CreatedAccountRule(scope: Construct, id: string, props: OuRuleProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -392,6 +465,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.applyRemovalPolicy"></a>
 
@@ -487,7 +601,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isConstruct"></a>
 
 ```typescript
 import { CreatedAccountRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -496,6 +610,20 @@ CreatedAccountRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.isConstruct.parameter.x"></a>
 
@@ -576,10 +704,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -601,16 +730,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -647,6 +777,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.CreatedAccountRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -713,6 +855,8 @@ new DeregisteredOrganizationalUnitRule(scope: Construct, id: string, props: OuRu
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -726,6 +870,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.applyRemovalPolicy"></a>
 
@@ -821,7 +1006,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isConstruct"></a>
 
 ```typescript
 import { DeregisteredOrganizationalUnitRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -830,6 +1015,20 @@ DeregisteredOrganizationalUnitRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.isConstruct.parameter.x"></a>
 
@@ -910,10 +1109,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -935,16 +1135,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -981,6 +1182,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DeregisteredOrganizationalUnitRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -1047,6 +1260,8 @@ new DisabledGuardrailRule(scope: Construct, id: string, props: GuardrailRuleProp
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -1060,6 +1275,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.applyRemovalPolicy"></a>
 
@@ -1155,7 +1411,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isConstruct"></a>
 
 ```typescript
 import { DisabledGuardrailRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -1164,6 +1420,20 @@ DisabledGuardrailRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.isConstruct.parameter.x"></a>
 
@@ -1244,10 +1514,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -1269,16 +1540,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -1315,6 +1587,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.DisabledGuardrailRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -1381,6 +1665,8 @@ new EnabledGuardrailRule(scope: Construct, id: string, props: GuardrailRuleProps
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -1394,6 +1680,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.applyRemovalPolicy"></a>
 
@@ -1489,7 +1816,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isConstruct"></a>
 
 ```typescript
 import { EnabledGuardrailRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -1498,6 +1825,20 @@ EnabledGuardrailRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.isConstruct.parameter.x"></a>
 
@@ -1578,10 +1919,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -1603,16 +1945,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -1649,6 +1992,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.EnabledGuardrailRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -1715,6 +2070,8 @@ new RegisteredOrganizationalUnitRule(scope: Construct, id: string, props: BaseRu
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -1728,6 +2085,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.applyRemovalPolicy"></a>
 
@@ -1823,7 +2221,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isConstruct"></a>
 
 ```typescript
 import { RegisteredOrganizationalUnitRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -1832,6 +2230,20 @@ RegisteredOrganizationalUnitRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.isConstruct.parameter.x"></a>
 
@@ -1912,10 +2324,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -1937,16 +2350,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -1983,6 +2397,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.RegisteredOrganizationalUnitRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -2049,6 +2475,8 @@ new SetupLandingZoneRule(scope: Construct, id: string, props: BaseRuleProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -2062,6 +2490,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.applyRemovalPolicy"></a>
 
@@ -2157,7 +2626,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isConstruct"></a>
 
 ```typescript
 import { SetupLandingZoneRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -2166,6 +2635,20 @@ SetupLandingZoneRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.isConstruct.parameter.x"></a>
 
@@ -2246,10 +2729,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -2271,16 +2755,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -2317,6 +2802,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.SetupLandingZoneRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -2383,6 +2880,8 @@ new UpdatedLandingZoneRule(scope: Construct, id: string, props: BaseRuleProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -2396,6 +2895,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.applyRemovalPolicy"></a>
 
@@ -2491,7 +3031,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isConstruct"></a>
 
 ```typescript
 import { UpdatedLandingZoneRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -2500,6 +3040,20 @@ UpdatedLandingZoneRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.isConstruct.parameter.x"></a>
 
@@ -2580,10 +3134,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -2605,16 +3160,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -2651,6 +3207,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedLandingZoneRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
@@ -2717,6 +3285,8 @@ new UpdatedManagedAccountRule(scope: Construct, id: string, props: AccountRulePr
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.applyCrossStackReferenceStrength">applyCrossStackReferenceStrength</a></code> | Override the cross-stack reference strength for this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -2730,6 +3300,47 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+---
+
+##### `applyCrossStackReferenceStrength` <a name="applyCrossStackReferenceStrength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.applyCrossStackReferenceStrength"></a>
+
+```typescript
+public applyCrossStackReferenceStrength(strength: ReferenceStrength): void
+```
+
+Override the cross-stack reference strength for this resource.
+
+When set, any cross-stack reference to this resource will use the specified
+mechanism instead of the global default determined by the
+`@aws-cdk/core:defaultCrossStackReferences` context key. This is useful for
+selectively weakening specific references to avoid the "deadly embrace" problem
+without changing the app-wide default.
+
+###### `strength`<sup>Required</sup> <a name="strength" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.applyCrossStackReferenceStrength.parameter.strength"></a>
+
+- *Type:* aws-cdk-lib.ReferenceStrength
+
+The reference strength to use for this resource.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.applyRemovalPolicy"></a>
 
@@ -2825,7 +3436,7 @@ No-op if target is undefined.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isConstruct"></a>
 
 ```typescript
 import { UpdatedManagedAccountRule } from '@renovosolutions/cdk-library-control-tower-lifecycle-events'
@@ -2834,6 +3445,20 @@ UpdatedManagedAccountRule.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.isConstruct.parameter.x"></a>
 
@@ -2914,10 +3539,11 @@ Event Rule ARN (i.e. arn:aws:events:<region>:<account-id>:rule/MyScheduledRule).
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.env">env</a></code> | <code>aws-cdk-lib.interfaces.ResourceEnvironment</code> | The environment this resource belongs to. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.ruleArn">ruleArn</a></code> | <code>string</code> | The value of the event rule Amazon Resource Name (ARN), such as arn:aws:events:us-east-2:123456789012:rule/example. |
 | <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.ruleName">ruleName</a></code> | <code>string</code> | The name event rule. |
+| <code><a href="#@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.ruleRef">ruleRef</a></code> | <code>aws-cdk-lib.interfaces.aws_events.RuleReference</code> | A reference to a Rule resource. |
 
 ---
 
@@ -2939,16 +3565,17 @@ The tree node.
 public readonly env: ResourceEnvironment;
 ```
 
-- *Type:* aws-cdk-lib.ResourceEnvironment
+- *Type:* aws-cdk-lib.interfaces.ResourceEnvironment
 
 The environment this resource belongs to.
 
-For resources that are created and managed by the CDK
-(generally, those created by creating new class instances like Role, Bucket, etc.),
-this is always the same as the environment of the stack they belong to;
-however, for imported resources
-(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-that might be different than the stack they were imported into.
+For resources that are created and managed in a Stack (those created by
+creating new class instances like `new Role()`, `new Bucket()`, etc.), this
+is always the same as the environment of the stack they belong to.
+
+For referenced resources (those obtained from referencing methods like
+`Role.fromRoleArn()`, `Bucket.fromBucketName()`, etc.), they might be
+different than the stack they were imported into.
 
 ---
 
@@ -2985,6 +3612,18 @@ public readonly ruleName: string;
 - *Type:* string
 
 The name event rule.
+
+---
+
+##### `ruleRef`<sup>Required</sup> <a name="ruleRef" id="@renovosolutions/cdk-library-control-tower-lifecycle-events.UpdatedManagedAccountRule.property.ruleRef"></a>
+
+```typescript
+public readonly ruleRef: RuleReference;
+```
+
+- *Type:* aws-cdk-lib.interfaces.aws_events.RuleReference
+
+A reference to a Rule resource.
 
 ---
 
