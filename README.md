@@ -2,9 +2,25 @@
 
 NOTE: This project is in active development.
 
-This construct library contains events that represent lifecycle events in Control Tower or events related to actions in Control Tower. See the [API](API.md) for full details on the available constructs.
+EventBridge rules for AWS Control Tower lifecycle events and Organizations
+account creation. See the [API](API.md) for the available constructs.
+
+Rules match successful events by default. Set `eventState` to
+`EventStates.FAILED` to match failures instead. You can filter by account,
+OU, or guardrail. If you set both `ouId` and `ouName`, both must match.
+
+## Development
+
+Requires Node.js and pnpm 12. From the repository directory:
+
+```bash
+pnpm install --frozen-lockfile
+pnpm build
+```
 
 ## References
 
-- [Reference](https://github.com/aws/aws-cdk/issues/3235) for creating constructs that extend and existing one more easily
-- [Control Tower Lifecycle Events](https://docs.aws.amazon.com/controltower/latest/userguide/lifecycle-events.html) AWS doc
+- [Extending constructs](https://github.com/aws/aws-cdk/issues/3235)
+- [Control Tower lifecycle events][lifecycle-events]
+
+[lifecycle-events]: https://docs.aws.amazon.com/controltower/latest/userguide/lifecycle-events.html
