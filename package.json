@@ -18,7 +18,6 @@
     "eslint": "projen eslint",
     "package": "projen package",
     "package-all": "projen package-all",
-    "package:dotnet": "projen package:dotnet",
     "package:js": "projen package:js",
     "package:python": "projen package:python",
     "post-compile": "projen post-compile",
@@ -141,10 +140,6 @@
       "python": {
         "distName": "renovosolutions.aws-cdk-control-tower-lifecycle-events",
         "module": "renovosolutions_control_tower_lifecycle_events"
-      },
-      "dotnet": {
-        "namespace": "renovosolutions",
-        "packageId": "Renovo.AWSCDK.ControlTowerLifecycleEvents"
       }
     },
     "tsconfig": "tsconfig.json",

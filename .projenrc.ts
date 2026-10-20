@@ -83,10 +83,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'renovosolutions.aws-cdk-control-tower-lifecycle-events',
     module: 'renovosolutions_control_tower_lifecycle_events',
   },
-  publishToNuget: {
-    dotNetNamespace: 'renovosolutions',
-    packageId: 'Renovo.AWSCDK.ControlTowerLifecycleEvents',
-  },
   jestOptions: {
     jestConfig: {
       fakeTimers: {
